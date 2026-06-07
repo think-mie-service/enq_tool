@@ -102,7 +102,7 @@ if uploaded_file is not None:
                 # ★ 追加：回転正規化（印刷→PDF の代替）
                 normalized_data = normalize_rotation(input_data)
 
-                output_pdf = add_numbering_with_fitz(input_data, pages_per_doc, start_number)
+                output_pdf = add_numbering_with_fitz(normalized_data, pages_per_doc, start_number)
 
                 st.success("成功しました！")
                 # 入力ファイル名（拡張子除く） + "nm" + ".pdf" にする
